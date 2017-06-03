@@ -12,14 +12,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="blog-post">
-        <a href="<?php the_permalink(); ?>">
-            <div class="item-img-wrap">
-                <img src="<?php the_post_thumbnail_url('blog-single-thumbnail') ?>" class="img-responsive" alt="Blog Post">
-                <div class="item-img-overlay">
-                    <span></span>
-                </div>
-            </div>                       
-        </a><!--work link-->
+        <?php if(has_post_thumbnail()): ?>
+            <a href="<?php the_permalink(); ?>">
+                <div class="item-img-wrap">
+                    <img src="<?php the_post_thumbnail_url('blog-single-thumbnail') ?>" class="img-responsive" alt="Blog Post">
+                    <div class="item-img-overlay">
+                        <span></span>
+                    </div>
+                </div>                       
+            </a><!--work link-->
+         <?php endif; ?>      
         <ul class="list-inline post-detail">
             <li>by <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author() ); ?></a></li>
             <li><i class="fa fa-calendar"></i> <?php the_time('l, F j, Y') ?></li>
