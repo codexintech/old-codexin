@@ -28,14 +28,16 @@ $header_top = $codexin['codexin-header-top'];
 
 							</div>
 						</div>
-						<div class="col-sm-2 hidden-xs">
+						<div class="col-sm-2 hidden-xs text-center">
 							<div id="logo" class="">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 
 								<?php if (!empty($codexin['codexin-logo']['url'])):?>
 
-									<img src="<?php echo $codexin['codexin-logo']['url']?>" alt=""></a>
+									<img src="<?php echo $codexin['codexin-logo']['url']?>" alt="Logo">
+								<?php else: echo "INSERT LOGO HERE"; ?>
 								<?php endif; ?>
+								</a>
 							</div>
 						</div>
 						<div class="col-sm-5">
@@ -95,6 +97,7 @@ $header_top = $codexin['codexin-header-top'];
 									<?php if (!empty($codexin['codexin-logo']['url'])):?>
 
 										<img src="<?php echo $codexin['codexin-logo']['url']?>" alt="Logo">
+									<?php else: echo "INSERT LOGO HERE"; ?>	
 									<?php endif; ?>
 									</a>	
 								</div>

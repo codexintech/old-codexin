@@ -79,6 +79,7 @@ $header_top = $codexin['codexin-header-top'];
 									<?php if (!empty($codexin['codexin-logo']['url'])):?>
 
 										<img src="<?php echo $codexin['codexin-logo']['url']?>" alt="Logo">
+									<?php else: echo "LOGO HERE"; ?>		
 									<?php endif; ?>
 									</a>
 								</div>
@@ -96,6 +97,7 @@ $header_top = $codexin['codexin-header-top'];
 									<?php if (!empty($codexin['codexin-logo']['url'])):?>
 
 										<img src="<?php echo $codexin['codexin-logo']['url']?>" alt="Logo">
+									<?php else: echo "LOGO HERE"; ?>		
 									<?php endif; ?>
 									</a>
 								</div>
