@@ -1,0 +1,5 @@
+1. Four header versions included
+2. Breadcrumbs integrated
+3. Updated functions.php
+4. Six Footer Layout type included
+5. Cleanup theme options

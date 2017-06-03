@@ -1,0 +1,17 @@
+.headertop .flex-wrapper{
+	display: inherit;
+}
+.headertop #logo {
+    padding: 14px 0;
+}
+
+#cta_section .flex-wrapper div , #cx_cta_section .flex-wrapper div {
+    display: inline-block;
+}
+#cta_section .flex-wrapper, #cx_cta_section .flex-wrapper {
+    display: block;
+    align-items: center;
+}
+/*#cta_section , #cx_cta_section {
+    padding-bottom: 80px;
+}*/
