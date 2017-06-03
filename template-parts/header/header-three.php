@@ -78,8 +78,9 @@ $header_top = $codexin['codexin-header-top'];
 
 									<?php if (!empty($codexin['codexin-logo']['url'])):?>
 
-										<img src="<?php echo $codexin['codexin-logo']['url']?>" alt=""></a>
+										<img src="<?php echo $codexin['codexin-logo']['url']?>" alt="Logo">
 									<?php endif; ?>
+									</a>
 								</div>
 							</div>
 							<div id="o-wrapper" class="mobile-nav o-wrapper">
@@ -94,12 +95,13 @@ $header_top = $codexin['codexin-header-top'];
 
 									<?php if (!empty($codexin['codexin-logo']['url'])):?>
 
-										<img src="<?php echo $codexin['codexin-logo']['url']?>" alt=""></a>
+										<img src="<?php echo $codexin['codexin-logo']['url']?>" alt="Logo">
 									<?php endif; ?>
+									</a>
 								</div>
 							</div>
 							<div class="col-sm-10 hidden-xs">
-		                        <div class="menu-area alignright">
+                <div class="menu-area alignright">
 									<?php get_main_menu() ?>
 								</div> <!-- end of menu-area -->
 							</div>
