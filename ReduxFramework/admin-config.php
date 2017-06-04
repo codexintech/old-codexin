@@ -392,6 +392,7 @@
                 'required' => array( 'codexin-header-top', '=', '1' ),
                 'title'    => __( 'Phone Number', 'codexin' ),
                 'desc'     => __( 'Please insert  Your Phone: example: (707) 123-4567 ', 'codexin' ),
+                'default'  => '(707) 123-4567',
             ),
 
 
@@ -401,6 +402,7 @@
                 'required' => array( 'codexin-header-top', '=', '1' ),
                 'title'    => __( 'Phone Number URL', 'codexin' ),
                 'desc'     => __( 'Please enter phone number URL: example: +17071234567  ', 'codexin' ),
+                'default'  => '+7071234567',
             ),
 
             array(
@@ -409,6 +411,7 @@
                 'required' => array( 'codexin-header-top', '=', '1' ),
                 'title'    => __( 'Email', 'codexin' ),
                 'desc'     => __( 'Please insert  Your Email  ', 'codexin' ),
+                'default'  => 'email@email.com',
             ),
         )
     ) );
@@ -424,12 +427,14 @@
                 'type'     => 'text',
                 'title'    => __( 'Twitter ', 'codexin' ),
                 'desc'     => __( 'Please insert Twitter profile  ', 'codexin' ),
+                'default'  => '',
             ),
             array(
                 'id'       => 'codexin-facebook',
                 'type'     => 'text',
                 'title'    => __( 'Facebook ', 'codexin' ),
                 'desc'     => __( 'Please insert Facebook profile  ', 'codexin' ),
+                'default'  => '',
             ),
 
             array(
@@ -437,6 +442,7 @@
                 'type'     => 'text',
                 'title'    => __( 'Instagram ', 'codexin' ),
                 'desc'     => __( 'Please Insert Instagram profile  ', 'codexin' ),
+                'default'  => '',
             ),
 
              array(
@@ -444,18 +450,21 @@
                 'type'     => 'text',
                 'title'    => __( 'Linkedin ', 'codexin' ),
                 'desc'     => __( 'Please Insert Linkedin profile  ', 'codexin' ),
+                'default'  => '',
             ),
              array(
                 'id'       => 'codexin-youtube',
                 'type'     => 'text',
                 'title'    => __( 'Youtube ', 'codexin' ),
                 'desc'     => __( 'Please Insert Youtube profile  ', 'codexin' ),
+                'default'  => '',
             ),
              array(
                 'id'       => 'codexin-vimeo',
                 'type'     => 'text',
                 'title'    => __( 'Vimeo ', 'codexin' ),
                 'desc'     => __( 'Please Insert vimeo profile  ', 'codexin' ),
+                'default'  => '',
             ),
 
              array(
@@ -463,6 +472,7 @@
                 'type'     => 'text',
                 'title'    => __( 'Google-Plus ', 'codexin' ),
                 'desc'     => __( 'Please Insert Google Plus profile  ', 'codexin' ),
+                'default'  => '',
             ),
             
         )
@@ -478,6 +488,7 @@
                 'type'     => 'media',
                 'title'    => __( 'Logo  ', 'codexin' ),
                 'desc'     => __( 'Please Upload  Logo ', 'codexin' ),
+                'default'  => array( 'url' => 'http://placehold.it/250X50' ),
             ),
             
         )
@@ -581,6 +592,8 @@
                 'required' => array( 'codexin-footer_copyright', '=', '1' ),
                 'title'    => __( 'Footer copyright text  ', 'codexin' ),
                 'desc'     => __( 'Please add your copyright text  ', 'codexin' ),
+                'validate' => 'html',
+                'default'  => 'HTML is allowed in here.'
             ),
 
         )
@@ -603,6 +616,7 @@
                     'desc' => 'Enter Your Google Map API Key',
                     'id'    => 'codexin-google-map-api-key',                  
                     'type'  => 'text',
+                    'desc'  => 'If you don\'t have the API key yet, then <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">Click Here</a> to get a API key', 
                     'default' => ''
                 ),
 
@@ -645,7 +659,7 @@
 	                //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
 	                // 'desc'     => __( 'Basic media uploader with disabled URL input field.', 'codexin' ),
 	                // 'subtitle' => __( 'Upload any media using the WordPress native uploader', 'codexin' ),
-	                'default'  => array( 'url' => 'http://www.surgeenterprise.com/wp-content/uploads/2017/04/map-marker-1.png' ),
+	                'default'  => array( 'url' => ReduxFramework::$_url . 'assets/img/map-marker-1.png' ),
 	                //'hint'      => array(
 	                //    'title'     => 'Hint Title',
 	                //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
