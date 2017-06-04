@@ -3,3 +3,10 @@
 3. Updated functions.php
 4. Six Footer Layout type included
 5. Cleanup theme options
+
+Date: 05-Jun-17 (Zaman)
+
+1. A new Helper file helpers.php added inside /lib directory and created a function to get the theme option values. "global $codexin" don't need to call anymore now.
+2. Global variable name replaced with CONSTANT at redux admin-config.php
+3. Adjusted Theme options throughout the theme files
+4. Declared CONSTANT at functions.php

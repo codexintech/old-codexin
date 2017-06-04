@@ -49,8 +49,7 @@ add_action( 'widgets_init', 'codexin_footer_widgets' );
 
 function codexin_footer_widgets () {
 
-	global $codexin;
-	$codexin_footer = $codexin['codexin-footer-version'];
+	$codexin_footer = codexin_option('codexin-footer-version');
 			
 
 	if($codexin_footer == 1):

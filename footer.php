@@ -14,9 +14,9 @@
 
 
 	
-		<?php global $codexin;
-			$codexin_footer = $codexin['codexin-footer-version'];
-			$codexin_cpr = $codexin['codexin-footer_copyright'];
+		<?php 
+			$codexin_footer = codexin_option('codexin-footer-version');
+			$codexin_cpr = codexin_option('codexin-footer_copyright');
 		 ?>
  	
 
@@ -48,8 +48,8 @@
 						</div>
 						<p class="copyright-legal">
 							 <?php global  $codexin; ?>
-							 <?php  if (!empty($codexin['codexin-copyright'])): ?>
-							 	<?php echo $codexin['codexin-copyright'] ?>
+							 <?php  if (!empty(codexin_option('codexin-copyright'))): ?>
+							 	<?php echo codexin_option('codexin-copyright'); ?>
 							 <?php endif;?>
 						</p>
 

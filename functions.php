@@ -1,4 +1,8 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+define( 'CODEXIN_THEME_OPTIONS', 'codexin_option' );
+
 /**
  * codexin functions and definitions
  *
@@ -65,6 +69,9 @@ class Codexin {
 
 		//Adding Custom Comments
 		require get_template_directory() . '/lib/customcomment.php';
+
+		//Adding Helper File
+		require get_template_directory() . '/lib/helpers.php';
 		
 	}
 

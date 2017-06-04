@@ -64,8 +64,7 @@ function codexin_scripts () {
 	//wp_enqueue_script( 'custom-typed-scripts', get_template_directory_uri() . '/js/codexin-typed.js', array ( 'typed-scripts' ), 1.1, true);
 
 	if(is_page_template('page-templates/page-contact.php')):
-		global $codexin;
-		$gmap_api_key = $codexin['codexin-google-map-api-key'];
+		$gmap_api_key = codexin_option('codexin-google-map-api-key');
 		if(!empty($gmap_api_key)): 
 			wp_enqueue_script( 'google-js', 'https://maps.googleapis.com/maps/api/js?key='.$gmap_api_key, array('jquery'), 1.1, true);
 		else: 

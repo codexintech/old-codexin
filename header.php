@@ -15,18 +15,11 @@
 ?><!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
-
 <head>
-
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-
 <meta http-equiv="X-UA-Compatible" content="IE=9">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title><?php bloginfo('name'); ?></title>
-
-
 
     <!--[if lt IE 9]>
 
@@ -44,25 +37,22 @@
 
     <![endif]-->
 
-<?php global $codexin ?>
-
-
     <?php 
 
-    if(!empty($codexin['codexin-google-map-latitude'])):
-        $latitude = $codexin['codexin-google-map-latitude'];
+    if(!empty(codexin_option('codexin-google-map-latitude'))):
+        $latitude = codexin_option('codexin-google-map-latitude');
     endif;
 
-    if(!empty($codexin['codexin-google-map-longitude'])):
-        $longtitude = $codexin['codexin-google-map-longitude'];
+    if(!empty(codexin_option('codexin-google-map-longitude'))):
+        $longtitude = codexin_option('codexin-google-map-longitude');
     endif;
 
-    if(!empty($codexin['codexin-google-map-zoom'])):
-        $c_zoom = $codexin['codexin-google-map-zoom'];
+    if(!empty(codexin_option('codexin-google-map-zoom'))):
+        $c_zoom = codexin_option('codexin-google-map-zoom');
     endif;
 
-    if(!empty($codexin['codexin-google-map-marker'])):
-        $gmap_marker = $codexin['codexin-google-map-marker'];
+    if(!empty(codexin_option('codexin-google-map-marker'))):
+        $gmap_marker = codexin_option('codexin-google-map-marker');
     endif;
 
     ?>
@@ -104,9 +94,7 @@
 	<header id="header" class="header">
 		<?php 
 		
-		$header_version = $codexin ['codexin-header-version'];
-		?>
-		<?php
+		$header_version = codexin_option('codexin-header-version');
 
 		if($header_version == 1): 
 		get_template_part('template-parts/header/header', 'one');
@@ -171,7 +159,7 @@
 							 ?></h1>
 							 <div class="breadcrumbs-wrapper">
 							 	<p>
-							 	<?php $codexin_bc = $codexin['codexin-bcrumbs']; ?>
+							 	<?php $codexin_bc = codexin_option('codexin-bcrumbs'); ?>
 							 	<?php if( $codexin_bc == 1 ): ?>
 							 	<?php 
 									if (function_exists('codexin_custom_breadcrumbs')) {
