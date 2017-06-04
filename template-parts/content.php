@@ -37,9 +37,11 @@
 					the_excerpt();
 				endif; ?>
 
+            <?php if(!is_single()): ?>
                 <p class="blog-btn"><a class="cx_btn cx_centerSwipe cx_skewSwipe" href="<?php the_permalink(); ?>">
                   <span>Read More</span>
                 </a></p>
+            <?php endif; ?>    
 		</div><!-- .entry-content -->
 
         <?php if(has_tag()): ?>
