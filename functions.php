@@ -1,8 +1,4 @@
 <?php
-// Exit if accessed directly
-if ( !defined('ABSPATH')) exit;
-define( 'CODEXIN_THEME_OPTIONS', 'codexin_option' );
-
 /**
  * codexin functions and definitions
  *
@@ -10,6 +6,13 @@ define( 'CODEXIN_THEME_OPTIONS', 'codexin_option' );
  *
  * @package codexin
  */
+
+
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
+// Declaring Global Variable for Theme Options
+define( 'CODEXIN_THEME_OPTIONS', 'codexin_option' );
 
 
 if( ! class_exists( 'Codexin' ) ) :
