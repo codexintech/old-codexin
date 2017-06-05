@@ -40,6 +40,7 @@ function codexin_scripts () {
 
 	wp_enqueue_style( 'main-stylesheet', get_stylesheet_uri() );
 	wp_enqueue_style( 'responsive-stylesheet', get_template_directory_uri() . '/css/responsive.css' );
+	wp_enqueue_style( 'scss-stylesheet', get_template_directory_uri() . '/scss/style.css' );
 	
 
 	// Load scripts
