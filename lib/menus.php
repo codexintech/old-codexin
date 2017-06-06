@@ -59,5 +59,25 @@ function init_mobile_menu () {
 	return $args;
 } // codexin_mobile_menu ()
 
+// Mega Menu implementation
 
+function codexin_mega_menu_init() {
+    $location = 'main_menu';
+    $css_class = 'has-mega-menu';
+    $locations = get_nav_menu_locations();
+    if ( isset( $locations[ $location ] ) ) {
+        $menu = get_term( $locations[ $location ], 'nav_menu' );
+        if ( $items = wp_get_nav_menu_items( $menu->name ) ) {
+            foreach ( $items as $item ) {
+                if ( in_array( $css_class, $item->classes ) ) {
+                    register_sidebar( array(
+                        'id'   => 'mega-menu-widget-area-' . $item->ID,
+                        'name' => $item->title . ' - Mega Menu',
+                    ) );
+                }
+            }
+        }
+    }
+}
+add_action( 'widgets_init', 'codexin_mega_menu_init' );
 ?>
