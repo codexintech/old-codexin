@@ -448,7 +448,7 @@ a.mpopup {
     top:0;
     left:0;
     display: block;
-    z-index:1;
+    z-index:3;
     width:100%;
     background: #333;
     /*background: rgba(0,0,0,.55);*/
