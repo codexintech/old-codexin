@@ -179,9 +179,9 @@
 
  	register_post_type( 'clients', $args );
 
- } // End codexin_framework_custompost_type()...
 
- 
+} // End codexin_framework_custompost_type()...
+
 
 /**
  * Create Custome Place Holders..
