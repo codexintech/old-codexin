@@ -272,6 +272,7 @@
                 'title'    => __( 'Body Font', 'codexin' ),
                 'subtitle' => __( 'Specify the body font properties.', 'codexin' ),
                 'google'   => true,
+                'font-backup' => true,
                 'output'   => array('body'),
                 'default'  => array(
                     'color'       => '#333',
@@ -301,6 +302,7 @@
                 //'all_styles'  => true,
                 // Enable all Google Font style/weight variations to be added to the page
                 'output'      => array( 'h2' ),
+                'google'      => true,
                 // An array of CSS selectors to apply this font style to dynamically
                 //'compiler'    => array( 'h2' ),
                 // An array of CSS selectors to apply this font style to dynamically
@@ -311,11 +313,79 @@
                     'color'       => '#333',
                     'font-style'  => '700',
                     'font-family' => 'Abel',
-                    'google'      => true,
                     'font-size'   => '33px',
                     'line-height' => '40px'
                 ),
             ),
+
+            array(
+                'id'       => 'codexin-typography-h3',
+                'type'     => 'typography',
+                'title'    => __( 'Typography h3', 'codexin' ),
+                'subtitle' => __( 'Specify h3 font properties.', 'codexin' ),
+                'font-backup' => true,
+                'google'   => true,
+                'output'   => array('h3'),
+                'default'  => array(
+                    'color'       => '#333',
+                    'font-size'   => '16px',
+                    'line-height' => '26px',
+                    'font-family' => 'Arial,Helvetica,sans-serif',
+                    'font-weight' => 'Normal',
+                ),
+            ),
+
+            array(
+                'id'       => 'codexin-typography-h4',
+                'type'     => 'typography',
+                'title'    => __( 'Typography h4', 'codexin' ),
+                'subtitle' => __( 'Specify h4 font properties.', 'codexin' ),
+                'font-backup' => true,
+                'google'   => true,
+                'output'   => array('h4'),
+                'default'  => array(
+                    'color'       => '#333',
+                    'font-size'   => '16px',
+                    'line-height' => '26px',
+                    'font-family' => 'Arial,Helvetica,sans-serif',
+                    'font-weight' => 'Normal',
+                ),
+            ),
+
+            array(
+                'id'       => 'codexin-typography-h5',
+                'type'     => 'typography',
+                'title'    => __( 'Typography h5', 'codexin' ),
+                'subtitle' => __( 'Specify h5 font properties.', 'codexin' ),
+                'font-backup' => true,
+                'google'   => true,
+                'output'   => array('h5'),
+                'default'  => array(
+                    'color'       => '#333',
+                    'font-size'   => '16px',
+                    'line-height' => '26px',
+                    'font-family' => 'Arial,Helvetica,sans-serif',
+                    'font-weight' => 'Normal',
+                ),
+            ),
+
+            array(
+                'id'       => 'codexin-typography-h6',
+                'type'     => 'typography',
+                'title'    => __( 'Typography h6', 'codexin' ),
+                'subtitle' => __( 'Specify h6 font properties.', 'codexin' ),
+                'font-backup' => true,
+                'google'   => true,
+                'output'   => array('h6'),
+                'default'  => array(
+                    'color'       => '#333',
+                    'font-size'   => '16px',
+                    'line-height' => '26px',
+                    'font-family' => 'Arial,Helvetica,sans-serif',
+                    'font-weight' => 'Normal',
+                ),
+            ),
+
         )
     ) );
 
