@@ -26,3 +26,39 @@ if (!function_exists('codexin_option')){
         }
     }
 }
+
+
+function codexin_add_dynamic_js_variables() {
+
+    if(!empty(codexin_option('codexin-google-map-latitude'))):
+        $latitude = codexin_option('codexin-google-map-latitude');
+    endif;
+
+    if(!empty(codexin_option('codexin-google-map-longitude'))):
+        $longtitude = codexin_option('codexin-google-map-longitude');
+    endif;
+
+    if(!empty(codexin_option('codexin-google-map-zoom'))):
+        $c_zoom = codexin_option('codexin-google-map-zoom');
+    endif;
+
+    if(!empty(codexin_option('codexin-google-map-marker'))):
+        $gmap_marker = codexin_option('codexin-google-map-marker');
+    endif;
+
+    $codeopt = '';
+    $codeopt .= '
+    <script type="text/javascript">
+        var codexin_lat = "'. $latitude .'"; 
+        var codexin_long = "'. $longtitude .'"; 
+        var codexin_marker = "'. $gmap_marker['url'] .'"; 
+        var codexin_m_zoom = Number ("'. $c_zoom .'"); 
+    </script>
+
+    ';
+
+    echo $codeopt;
+
+}
+
+add_action('wp_head', 'codexin_add_dynamic_js_variables');

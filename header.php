@@ -19,54 +19,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php bloginfo('name'); ?></title>
-
-    <!--[if lt IE 9]>
-
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
-    <![endif]-->
-
-
-
-    <!--[if IE 9]>
-
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie9.css">
-
-    <![endif]-->
-
-    <?php 
-
-    if(!empty(codexin_option('codexin-google-map-latitude'))):
-        $latitude = codexin_option('codexin-google-map-latitude');
-    endif;
-
-    if(!empty(codexin_option('codexin-google-map-longitude'))):
-        $longtitude = codexin_option('codexin-google-map-longitude');
-    endif;
-
-    if(!empty(codexin_option('codexin-google-map-zoom'))):
-        $c_zoom = codexin_option('codexin-google-map-zoom');
-    endif;
-
-    if(!empty(codexin_option('codexin-google-map-marker'))):
-        $gmap_marker = codexin_option('codexin-google-map-marker');
-    endif;
-
-    ?>
-
-
-
-    <script type="text/javascript">
-        var codexin_lat = "<?= $latitude ?>"; 
-        var codexin_long = "<?= $longtitude ?>"; 
-        var codexin_marker = "<?= $gmap_marker['url'] ?>"; 
-        var codexin_m_zoom = Number ("<?= $c_zoom ?>"); 
-        
-    </script>
-
 
 <?php wp_head(); ?>
 

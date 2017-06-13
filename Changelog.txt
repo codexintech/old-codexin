@@ -10,3 +10,8 @@ Date: 05-Jun-17 (Zaman)
 2. Global variable name replaced with CONSTANT at redux admin-config.php
 3. Adjusted Theme options throughout the theme files
 4. Declared CONSTANT at functions.php
+
+Date: 14-Jun-17 (Zaman)
+
+1. Added IE9 Specific Stylesheets and Js dynamically using scripts.php (They were hard coded in header.php earlier)
+2. Shifted all JS variables (Coming from Theme Options) that were present in header.php to the helpers.php file. Variables will be added now using function codexin_add_dynamic_js_variables
