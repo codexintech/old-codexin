@@ -272,9 +272,11 @@
                 'title'    => __( 'Body Font', 'codexin' ),
                 'subtitle' => __( 'Specify the body font properties.', 'codexin' ),
                 'google'   => true,
+                'output'   => array('body'),
                 'default'  => array(
                     'color'       => '#333',
-                    'font-size'   => '30px',
+                    'font-size'   => '16px',
+                    'line-height' => '26px',
                     'font-family' => 'Arial,Helvetica,sans-serif',
                     'font-weight' => 'Normal',
                 ),
@@ -282,7 +284,7 @@
             array(
                 'id'          => 'codexin-typography-h2',
                 'type'        => 'typography',
-                'title'       => __( 'Typography h2.site-description', 'codexin' ),
+                'title'       => __( 'Typography h2', 'codexin' ),
                 //'compiler'      => true,  // Use if you want to hook in your own CSS compiler
                 //'google'      => false,
                 // Disable google fonts. Won't work if you haven't defined your google api key
@@ -296,11 +298,11 @@
                 //'letter-spacing'=> true,  // Defaults to false
                 //'color'         => false,
                 //'preview'       => false, // Disable the previewer
-                'all_styles'  => true,
+                //'all_styles'  => true,
                 // Enable all Google Font style/weight variations to be added to the page
-                'output'      => array( 'h2.site-description, .entry-title' ),
+                'output'      => array( 'h2' ),
                 // An array of CSS selectors to apply this font style to dynamically
-                'compiler'    => array( 'h2.site-description-compiler' ),
+                //'compiler'    => array( 'h2' ),
                 // An array of CSS selectors to apply this font style to dynamically
                 'units'       => 'px',
                 // Defaults to px
